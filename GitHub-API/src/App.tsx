@@ -1,5 +1,5 @@
 import Search from './components/Search.tsx'
-import './App.css'
+import classes from "./App.module.css"
 import { UserProps } from './types/user.ts'
 import { useState } from 'react'
 
@@ -15,10 +15,10 @@ const App = () => {
     console.log(data)
   }
   return (
-    <>
-     <h1>GitHub Finder</h1>
-     <div><Search loadUser={loadUser}/></div>
-    </>
+    <div className={classes.app}>
+    <h1>GitHub Finder</h1>
+    <Search loadUser={loadUser}/>
+    </div>
   )
 }
 
